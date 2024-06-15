@@ -11,9 +11,13 @@ const port = 4000;
 // Middleware to parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
 app.use(cors(
     {
-        origin:"https://indie-trip-client.vercel.app/",
+        origin: 'https://indie-trip-client.vercel.app/',
+        methods: 'GET,POST,PUT,DELETE',
+        allowedHeaders: 'Content-Type,Authorization',
+        credentials: true
     }
 )); // Since you're running the frontend and backend on different ports, you need to handle CORS (Cross-Origin Resource Sharing) in your Express server.
 
@@ -24,7 +28,7 @@ app.get('/hello', (req, res) => {
 
 // Route to handle form submission
 app.post('/submit-form', async (req, res) => {
-    const { name, email,phone,destination,travelDates, message } = req.body;
+    const { name, email, phone, destination, travelDates, message } = req.body;
 
     // Nodemailer configuration
     let transporter = nodemailer.createTransport({
