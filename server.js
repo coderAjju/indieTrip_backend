@@ -19,7 +19,7 @@ app.use(cors(
     // }
 )); // Since you're running the frontend and backend on different ports, you need to handle CORS (Cross-Origin Resource Sharing) in your Express server.
 
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
     console.log('GET / request received');
     res.send("hello world");
 });
