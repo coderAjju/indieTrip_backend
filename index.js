@@ -13,9 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors(
     {
-        origin:["https://indietrip-backend.onrender.com"],
-        methods:["POST","GET","PUT","DELETE"],
-        credentials:true
+        origin:"https://indietrip-backend.onrender.com",
     }
 )); // Since you're running the frontend and backend on different ports, you need to handle CORS (Cross-Origin Resource Sharing) in your Express server.
 
