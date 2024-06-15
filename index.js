@@ -21,7 +21,7 @@ app.use(cors(
 
 app.get('/hello', (req, res) => {
     console.log('GET / request received');
-    res.send("hello world");
+    res.send("hello world to kaise ho app log");
 });
 
 // Route to handle form submission
