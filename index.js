@@ -9,8 +9,6 @@ const app = express();
 const port = 4000;
 
 // Middleware to parse form data
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 
 app.use(cors(
     {
@@ -20,6 +18,9 @@ app.use(cors(
         credentials: true
     }
 )); // Since you're running the frontend and backend on different ports, you need to handle CORS (Cross-Origin Resource Sharing) in your Express server.
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.get('/hello', (req, res) => {
     console.log('GET / request received');
