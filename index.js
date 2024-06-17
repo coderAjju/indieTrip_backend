@@ -45,8 +45,8 @@ app.post('/submit-form', async (req, res) => {
     let mailOptions = {
         from: email,
         to: process.env.ADMIN_EMAIL,
-        subject: 'Customer inquiry',
-        text: `New inquiry form submitted:
+        subject: 'Data Submission Notification from Your Website',
+        text: `This is to inform you that a new form submission has been received from the website.:
 
         Name: ${name}
         Email: ${email}
