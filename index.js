@@ -12,7 +12,7 @@ const port = 4000;
 
 app.use(cors(
     {
-        origin: 'https://indie-trip-client.vercel.app',
+        origin: 'https://indietripindia.com',
         methods: 'GET,POST,PUT,DELETE',
         allowedHeaders: 'Content-Type,Authorization',
         credentials: true
